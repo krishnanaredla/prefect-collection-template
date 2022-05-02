@@ -73,7 +73,7 @@ def test_bake_and_run_tests(cookies):
         assert result.project_path.is_dir()
         assert run_inside_dir('pip install -e ".[dev]"', str(result.project)) == 0
         assert run_inside_dir("pytest tests", str(result.project)) == 0
-        print("test_bake_and_run_tests path", str(result.project))
+        print("test_bake_and_run_tests path", result.project)
 
 
 def test_bake_with_underscore_name_fail(cookies):
